@@ -10,7 +10,7 @@ class Nogfx < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12 /nogfx_0.0.12_darwin_arm64.tar.gz"
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_darwin_arm64.tar.gz"
       sha256 "dfdde3af20328b9ea0acae1a6d8dfa3ff173e8c4a6180f17a1a5956f993cc934"
 
       def install
@@ -18,7 +18,7 @@ class Nogfx < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12 /nogfx_0.0.12_darwin_amd64.tar.gz"
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_darwin_amd64.tar.gz"
       sha256 "0eeb77c69e631c4bdb477642c60512550c4efbd198f475b79ff702d8072ab459"
 
       def install
@@ -29,7 +29,7 @@ class Nogfx < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12 /nogfx_0.0.12_linux_amd64.tar.gz"
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_linux_amd64.tar.gz"
       sha256 "1496ddb99514146100343051b2441f034f69bf6d8edaeb0b73a60b0e00e9b637"
 
       def install
@@ -37,7 +37,7 @@ class Nogfx < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12 /nogfx_0.0.12_linux_arm64.tar.gz"
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_linux_arm64.tar.gz"
       sha256 "fd1ab822469bf7478fde4a377b5f56387b0cfbb8a8eccbb1bb41e462f4f98b11"
 
       def install
