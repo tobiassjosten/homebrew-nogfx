@@ -5,21 +5,21 @@
 class Nogfx < Formula
   desc ""
   homepage ""
-  version "0.0.12"
+  version "0.0.13"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_darwin_arm64.tar.gz"
-      sha256 "dfdde3af20328b9ea0acae1a6d8dfa3ff173e8c4a6180f17a1a5956f993cc934"
+    if Hardware::CPU.intel?
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_darwin_amd64.tar.gz"
+      sha256 "e6588085b938c1a09541404ba07ff14f0fa6e8d238079474ea271b31f00adff4"
 
       def install
         bin.install "nogfx"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_darwin_amd64.tar.gz"
-      sha256 "0eeb77c69e631c4bdb477642c60512550c4efbd198f475b79ff702d8072ab459"
+    if Hardware::CPU.arm?
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_darwin_arm64.tar.gz"
+      sha256 "c86a263ecdf9d9c92468788f4b82b4364924b02a668564ebfe01ed7d5fc1672e"
 
       def install
         bin.install "nogfx"
@@ -28,17 +28,17 @@ class Nogfx < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_linux_amd64.tar.gz"
-      sha256 "1496ddb99514146100343051b2441f034f69bf6d8edaeb0b73a60b0e00e9b637"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_linux_arm64.tar.gz"
+      sha256 "d85d43bad8159a2205aa902d36fd2831c19dee555bc5c4e9495545685eb9930f"
 
       def install
         bin.install "nogfx"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.12/nogfx_0.0.12_linux_arm64.tar.gz"
-      sha256 "fd1ab822469bf7478fde4a377b5f56387b0cfbb8a8eccbb1bb41e462f4f98b11"
+    if Hardware::CPU.intel?
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_linux_amd64.tar.gz"
+      sha256 "37df3f4353110e21635e87e4f626347a88016cb7310795e5d6468d3646b24edb"
 
       def install
         bin.install "nogfx"
