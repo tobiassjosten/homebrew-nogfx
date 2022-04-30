@@ -5,21 +5,21 @@
 class Nogfx < Formula
   desc ""
   homepage ""
-  version "0.0.13"
+  version "0.0.14"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_darwin_amd64.tar.gz"
-      sha256 "e6588085b938c1a09541404ba07ff14f0fa6e8d238079474ea271b31f00adff4"
+    if Hardware::CPU.arm?
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.14/nogfx_0.0.14_darwin_arm64.tar.gz"
+      sha256 "ca9236eaf5bedfc890cbcd287d8c191f2eba0a6350f63de2d95a5ed97784e0c7"
 
       def install
         bin.install "nogfx"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_darwin_arm64.tar.gz"
-      sha256 "c86a263ecdf9d9c92468788f4b82b4364924b02a668564ebfe01ed7d5fc1672e"
+    if Hardware::CPU.intel?
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.14/nogfx_0.0.14_darwin_amd64.tar.gz"
+      sha256 "ba8534393b710fe92feb703b6745172142e96d767edc8be038f5d5a6b6ee382f"
 
       def install
         bin.install "nogfx"
@@ -29,16 +29,16 @@ class Nogfx < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_linux_arm64.tar.gz"
-      sha256 "d85d43bad8159a2205aa902d36fd2831c19dee555bc5c4e9495545685eb9930f"
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.14/nogfx_0.0.14_linux_arm64.tar.gz"
+      sha256 "39316d4fdfae3ab07e65b4a5fc6e191c7fcac934abbb0061586ed91f1bd32dc5"
 
       def install
         bin.install "nogfx"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.13/nogfx_0.0.13_linux_amd64.tar.gz"
-      sha256 "37df3f4353110e21635e87e4f626347a88016cb7310795e5d6468d3646b24edb"
+      url "https://github.com/tobiassjosten/nogfx/releases/download/0.0.14/nogfx_0.0.14_linux_amd64.tar.gz"
+      sha256 "a89fbf2036975cb890d1bb5ca8f0660cd95dc7fcdf3d8ddbaa6b6c3cfdca8cce"
 
       def install
         bin.install "nogfx"
